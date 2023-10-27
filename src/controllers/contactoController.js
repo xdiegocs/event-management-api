@@ -4,11 +4,11 @@ const Contacto = require("../models/contacto");
 
 exports.insertContacto = async (req, res) => {
   const contacto = new Contacto(
-    req.body.nombre,
-    req.body.apellidos,
-    req.body.direccion,
-    req.body.correo,
-    req.body.mensaje
+    req.body.Nombre,
+    req.body.Apellidos,
+    req.body.Direccion,
+    req.body.Correo,
+    req.body.Mensaje
   );
 
   try {

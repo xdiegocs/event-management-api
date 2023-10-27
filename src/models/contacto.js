@@ -1,10 +1,10 @@
 class Contacto {
-    constructor(nombre, apellidos, direccion, correo, mensaje) {
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.direccion = direccion || null;
-        this.correo = correo;
-        this.mensaje = mensaje;
+    constructor(Nombre, Apellidos, Direccion, Correo, Mensaje) {
+        this.nombre = Nombre;
+        this.apellidos = Apellidos;
+        this.direccion = Direccion || null;
+        this.correo = Correo;
+        this.mensaje = Mensaje;
     }
 }
 

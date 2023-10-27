@@ -1,5 +1,7 @@
-import express from "express";
+const express = require('express')
+import config from "../src/config.js";
 import morgan from "morgan";
+const cors = require('cors')
 // Routes
 const contactoRoutes = require('./routes/contactoRoutes');
 const cotizacionRoutes = require('./routes/cotizacionRoutes');
@@ -19,6 +21,12 @@ app.set("port", 4000);
 // Middlewares
 app.use(morgan("dev"));
 app.use(express.json());
+
+const corsOptions = {
+    origin: 'http://localhost:4200', // Permitir solicitudes solo desde este origen
+    methods: 'GET,PUT,POST,DELETE', // Métodos HTTP permitidos
+};
+app.use(cors(corsOptions));
 
 // Routes
 app.use('/contacto', contactoRoutes);

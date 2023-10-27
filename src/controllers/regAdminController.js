@@ -24,7 +24,7 @@ exports.registrarUsuarioAdmin = async (req, res) => {
             .input('Telefono', sql.NVarChar(15), admin.telefono)
             .input('Direccion', sql.NVarChar(50), admin.direccion)
             .input('Correo', sql.NVarChar(50), admin.correo)
-            .input('Contrasena', sql.NVarChar(50), admin.contrasena)
+            .input('Contrasenia', sql.NVarChar(50), admin.contrasena)
             .execute('SP_RegistrarUsuarioAdmin');
 
         res.status(200).json({ success: true, message: "Usuario administrador registrado exitosamente." });
