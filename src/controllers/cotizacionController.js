@@ -9,7 +9,7 @@ exports.insertCotizacion = async (req, res) => {
     req.body.fechaFin,
     req.body.lugar,
     req.body.cantidadPersonas,
-    req.body.cliente,
+    req.body.correo,
     req.body.evento
   );
 
@@ -21,7 +21,7 @@ exports.insertCotizacion = async (req, res) => {
       .input('FechaFin', sql.NVarChar(20), cotizacion.fechaFin)
       .input('Lugar', sql.NVarChar(25), cotizacion.lugar)
       .input('CantidadPersonas', sql.NVarChar(20), cotizacion.cantidadPersonas)
-      .input('Cliente', sql.Int, cotizacion.cliente)
+      .input('CorreoCliente', sql.NVarChar(25), cotizacion.correo)
       .input('Evento', sql.Int, cotizacion.evento)
       .execute('SP_IngresarCotizacion');
     

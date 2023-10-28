@@ -1,12 +1,12 @@
 class Cotizacion {
-    constructor(descripcion, fechaInicio, fechaFin, lugar, cantidadPersonas, evento, cliente) {
+    constructor(descripcion, fechaInicio, fechaFin, lugar, cantidadPersonas, correo, evento) {
       this.descripcion = descripcion;
       this.fechaInicio = fechaInicio;
       this.fechaFin = fechaFin;
       this.lugar = lugar;
       this.cantidadPersonas = cantidadPersonas;
-      this.evento = evento;
-      this.cliente = cliente;
+      this.correo = correo;
+      this.evento = evento;  
     }
   }
   
