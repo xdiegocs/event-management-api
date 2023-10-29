@@ -9,6 +9,7 @@ const adminRoutes = require('./routes/adminRoutes');
 const clienteRoutes = require('./routes/clienteRoutes');
 const getCotizacionRoutes = require('./routes/getCotizacionRoutes');
 const usuarioRoutes = require('./routes/usuarioRoutes');
+const passAdminRoutes = require('./routes/passAdminRoutes');
 const regAdminRoutes = require('./routes/regAdminRoutes');
 const regClienteRoutes = require('./routes/regClienteRoutes');
 
@@ -35,6 +36,7 @@ app.use('/admin', adminRoutes);
 app.use('/cliente', clienteRoutes);
 app.use('/cotizaciones', getCotizacionRoutes);
 app.use('/usuarios', usuarioRoutes);
+app.use('/admin', passAdminRoutes);
 app.use('/admin', regAdminRoutes);
 app.use('/cliente', regClienteRoutes);
 
